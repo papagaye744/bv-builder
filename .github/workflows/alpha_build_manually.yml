@@ -51,7 +51,7 @@ jobs:
       - name: Patch files
         run: |
           echo 'patching app/shared/src/main/kotlin/dev/aaa1115910/bv/util/NetworkUtil.kt'
-          sed -i '/suspend fun isMainlandChina()/,/^}/c\suspend fun isMainlandChina() = withContext(Dispatchers.IO) { false }' app/shared/src/main/kotlin/dev/aaa1115910/bv/util/NetworkUtil.kt
+          sed -i '/suspend fun isMainlandChina()/,/^    }/c\suspend fun isMainlandChina() = false' app/shared/src/main/kotlin/dev/aaa1115910/bv/util/NetworkUtil.kt
           echo 'patched result:'
           cat app/shared/src/main/kotlin/dev/aaa1115910/bv/util/NetworkUtil.kt
 
