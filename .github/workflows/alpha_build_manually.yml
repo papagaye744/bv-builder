@@ -6,13 +6,13 @@ on:
 jobs:
   build-alpha:
     name: Build Alpha Apk
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          repository: 'https://github.com/aaa1115910/bv'
+          repository: 'aaa1115910/bv'
           ref: develop
           fetch-depth: 0
           submodules: 'true'
